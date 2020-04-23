@@ -13,21 +13,54 @@ $ export CAP_ACCESS_TOKEN=<your generated access token from server>
 
 Note that *CAP_ACCESS_TOKEN* can also be passed as an argument in the command line interface. We will present the supported commands with some example outputs.
 
-
-## Retrieve the current user information {#retrieve-user}
-
-```bash
-$ cap-client me
+```
+**[terminal]
+**[prompt foo@joe]**[path ~]**[delimiter  $ ]**[command ./myscript]
+Normal output line. Nothing special here...
+But...
+You can add some colors. What about a warning message?
+**[warning [WARNING] The color depends on the theme. Could look normal too]
+What about an error message?
+**[error [ERROR] This is not the error you are looking for]
 ```
 
-```json
-{
-    "collaborations": ["ATLAS", "LHCb", "CMS", "ALICE"],
-    "id": 1,
-    "email": "user@cern.ch"
-}
+```
+**[terminal]
+**[prompt foo@joe]**[path ~]**[delimiter  $ ]**[command ./myscript]
+Normal output line. Nothing special here...
+But...
+You can add some colors. What about a warning message?
+**[warning [WARNING] The color depends on the theme. Could look normal too]
+What about an error message?
+**[error [ERROR] This is not the error you are looking for]
 ```
 
+
+!FILENAME test.js
+```
+var a = 10;
+a = a + 1;
+
+console.log(a);
+```
+
+
+
+
+
+```js:test.js
+var a = 10;
+a = a + 1;
+
+console.log(a);
+```
+
+```:test.js
+var a = 10;
+a = a + 1;
+
+console.log(a);
+```
 
 ### Get all types of analyses available {#get-all}
 
@@ -72,6 +105,21 @@ which returns
     }
 }
 ```
+
+| Name       | Type    | Desc                                                |
+| :--------- | :------ | :-------------------------------------------------- |
+| **app_id** | String  | App ID to list app pages for                        |
+| **page**   | Integer | The page to list                                    |
+| per_page   | Integer | Number of items to show per page                    |
+| order_by   | Symbol  | Field to sort results by                            |
+| order_dir  | Symbol  | Direction (asc, desc) to sort results by            |
+| filter     | String  | Text filter to search pages by name, title and html |
+
+
+|    argument   |      description       |
+|:---------:|-------------|----------:|
+| --pid | the PID of an analysis. |
+| --all | the PID of an analysis. |
 
 
 ### Retrieve an analysis {#retrieve-analysis}
