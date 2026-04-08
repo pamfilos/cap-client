@@ -28,7 +28,7 @@ import os
 import requests
 import urllib3
 from click import UsageError
-from future.moves.urllib.parse import urljoin
+from urllib.parse import urljoin
 
 from cap_client.errors import BadStatusCode
 

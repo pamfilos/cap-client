@@ -317,7 +317,7 @@ def test_files_upload_file(runner):
 
         res = runner.run("files upload -p some-pid dir/file.txt")
 
-    assert responses.calls[1].request.body.name == 'dir/file.txt'
+    assert responses.calls[1].request.body == b'Hello world'
     assert res.exit_code == 0
     assert res.stripped_output == 'File uploaded successfully.'
 

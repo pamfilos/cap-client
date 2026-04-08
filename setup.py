@@ -32,22 +32,22 @@ readme = open('README.rst').read()
 history = open('CHANGES.rst').read()
 
 tests_require = [
-    'check-manifest>=0.25',
-    'coverage>=4.0',
-    'mock>=2.0.0',
-    'pydocstyle>=1.0.0',
+    'check-manifest>=0.51',
+    'coverage>=7.13.5',
+    'mock>=5.2.0',
+    'pydocstyle>=6.3.0',
     'pytest-cache>=1.0',
-    'pytest-cov>=1.8.0',
-    'flake8',
-    'pytest>=2.8.0',
-    'responses>=0.10.6',
-    'pytest-vcr',
+    'pytest-cov>=7.0.0',
+    'flake8>=7.3.0',
+    'pytest>=9.0.2',
+    'responses>=0.26.0',
+    'pytest-vcr>=1.0.2',
 ]
 
 extras_require = {
     'docs': [
-        'Sphinx>=1.4.4',
-        'sphinx-rtd-theme>=0.1.9',
+        'Sphinx>=7.2.0',
+        'sphinx-rtd-theme>=2.0.0',
     ],
     'tests': tests_require,
 }
@@ -58,16 +58,12 @@ for key, reqs in extras_require.items():
         continue
     extras_require['all'].extend(reqs)
 
-setup_requires = [
-    'pytest-runner>=2.7',
-]
-
 install_requires = [
-    'click>=6.7',
-    'click-help-colors>=0.8',
-    'requests>=2.18.4',
-    'colorama>=0.4.3',
-    'future>=0.16.0',
+    'click>=8.3.1',
+    'click-help-colors>=0.9.4',
+    'requests>=2.32.5',
+    'colorama>=0.4.6',
+    'future>=1.0.0',
 ]
 
 packages = find_packages()
@@ -94,8 +90,6 @@ setup(
     },
     install_requires=install_requires,
     extras_require=extras_require,
-    setup_requires=setup_requires,
-    tests_require=tests_require,
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',

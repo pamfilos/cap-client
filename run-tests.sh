@@ -46,7 +46,7 @@ check_manifest () {
 }
 
 check_pytest_unit () {
-    python setup.py test
+    pytest tests/unit --cov=cap_client --cov-report=xml
 }
 
 check_pytest_e2e () {
